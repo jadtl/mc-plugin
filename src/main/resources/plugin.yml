@@ -1,0 +1,28 @@
+main: tl.jad.arcadia.BirthdayPlugin
+name: BirthdayPlugin
+api-version: "1.21.5"
+version: "1.0.0-SNAPSHOT"
+description: A plugin that celebrates players' birthdays
+load: POSTWORLD
+author: Jad Tala <self.jad.tl>
+prefix: BirthdayPlugin
+commands:
+  tpspwn:
+    description: This commnads teleports to spawn!
+    permission: arcadia.test
+    permission-message: You do not have permission!
+    usage: /<command> [test|stop]
+  hello:
+    description: This command says hello back!
+    permission: arcadia.test
+    permission-message: You do not have permission!
+    usage: /<command> [test|stop]
+permissions:
+  arcadia.test:
+    description: Allows experimental commands
+    default: op
+  arcadia.*:
+    description: Wildcard permission
+    default: op
+    children:
+      arcadia.test: true
